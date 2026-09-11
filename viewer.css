@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: #9cdcfe;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* fraction unit (fr) for deciding units taken by both sides */
+  min-height: 100vh;
+}
+
+#css {
+  margin: 0;
+  padding: 1rem;
+  color: #d4d4d4;
+  font: 14px/1.5 monospace;
+  overflow: auto;
+}
+
+#viewer {
+  padding: 1rem;
+  border-left: 2px solid #444;
+}
+
+#css .tok-comment {
+  color: #6a9955;
+}
+
+#css .tok-at-rule {
+  color: #c586c0;
+}
+
+#css .tok-selector {
+  color: #d7ba7d;
+}
+
+#css .tok-property {
+  color: #9cdcfe;
+}
+
+#css .tok-value {
+  color: #ce9178;
+}
+
+#css .tok-punct {
+  color: #808080;
+}
