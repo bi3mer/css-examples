@@ -1,31 +1,3 @@
-# css-conway
+# CSS Examples
 
-## Template
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example</title>
-    <link rel="stylesheet" href="../viewer.css" />
-  </head>
-  <body>
-    <main>
-      <pre id="css"></pre>
-      <div id="viewer">
-        <div class="rect"></div>
-      </div>
-    </main>
-
-    <style id="css-code">
-      .rect {
-        width: 200px;
-        height: 100px;
-        background: steelblue;
-      }
-    </style>
-    <script src="../viewer.js"></script>
-  </body>
-</html>
-```
+I'm learning CSS beyond the obvious stuff as part of teaching a course on web development. Hence, this repository.

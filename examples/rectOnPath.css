@@ -1,0 +1,78 @@
+#viewer {
+  container-type: size;
+  --mover-size: 100px;
+  --target-size: 25px;
+  --half-mover-size: calc(var(--mover-size) / 2);
+
+  --top-left: 0, 0;
+  --top-right: calc(100cqw - var(--mover-size)), 0;
+  --bot-right:
+    calc(100cqw - var(--mover-size)), calc(100cqh - var(--mover-size));
+  --bot-left: 0, calc(100cqh - var(--mover-size));
+}
+
+/* Rectangle that is moving around */
+.element1 {
+  width: var(--mover-size);
+  height: var(--mover-size);
+  background: mediumpurple;
+  position: relative;
+  z-index: 2;
+  animation-name: lap;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lap {
+  0% {
+    transform: translate(var(--top-left));
+  }
+
+  25% {
+    transform: translate(var(--top-right));
+  }
+
+  50% {
+    transform: translate(var(--bot-right));
+  }
+
+  75% {
+    transform: translate(var(--bot-left));
+  }
+
+  100% {
+    transform: translate(var(--top-left));
+  }
+}
+
+/* Targets in the path */
+.element2,
+.element3,
+.element4,
+.element5 {
+  width: var(--target-size);
+  height: var(--target-size);
+  background: orangered;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  translate: var(--half-mover-size) var(--half-mover-size); /* shift over */
+}
+
+.element2 {
+  transform: translate(var(--top-left));
+}
+
+.element3 {
+  transform: translate(var(--top-right));
+}
+
+.element4 {
+  transform: translate(var(--bot-right));
+}
+
+.element5 {
+  transform: translate(var(--bot-left));
+}

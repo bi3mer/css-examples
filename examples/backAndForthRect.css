@@ -1,0 +1,19 @@
+#viewer {
+  container-type: inline-size;
+}
+
+.element {
+  width: 200px;
+  height: 100px;
+  background: mediumpurple;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100cqw - 100%));
+  }
+}

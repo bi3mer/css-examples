@@ -24,6 +24,12 @@ main {
 }
 
 #viewer {
+  /* Stay one screen tall and pinned in view while the CSS pane scrolls,
+     so a long example does not stretch the viewer (and its cqh units). */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box; /* count the padding inside the 100vh */
   padding: 1rem;
   border-left: 2px solid #444;
 }
